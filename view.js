@@ -99,7 +99,6 @@ function buildErrorMessage(inputEl, errosMsg){
 
 document.querySelector(".submitBtn").addEventListener("click", event => {
     event.preventDefault();
-
     const gameTitle = document.getElementById("gameTitle");
     const gameDescription = document.getElementById("gameDescription");
     const gameGenre = document.getElementById("gameGenre");

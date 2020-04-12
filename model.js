@@ -64,7 +64,6 @@ async function updateGameRequest(updatedGameObj){
         console.log("The game cannot be updated: ", error);
     }
 }
-
 // "application/json"
 // {"cheie": "valoare", "cheie2": "valoare2"}
 
