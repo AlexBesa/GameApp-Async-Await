@@ -8,16 +8,14 @@ async function getGamesList(){
         });
         const responseData = await response.json();
         // throw new Error("eroarea mea!")
-        for (var i = 0; i < responseData.length; i++) {
-            createDomElement(responseData[i]);
-            console.log("all data is here: ", responseData);
-        }
+        console.log("all data is here: ", responseData);
+        return responseData;
     }
     catch (error) {
         console.log("There is an error: ", error);
     }
 }
-getGamesList();
+// getGamesList(); nu o folosesc aici, am pus pt verificare
 
 async function deleteGame(gameID) {
     try {

@@ -1,3 +1,11 @@
+async function startingApplication() {
+    const arrayOfGames = await getGamesList();
+    for (let i = 0; i < arrayOfGames.length; i++){
+        createDomElement(arrayOfGames[i]);
+    }
+}
+startingApplication();
+
 function createDomElement(gameObj){
     var container1 = document.querySelector('.container');
     const gameELement = document.createElement("div");
