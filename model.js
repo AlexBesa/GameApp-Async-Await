@@ -1,4 +1,4 @@
-var apiURL = "https://games-world.herokuapp.com";
+var apiURL = 'https://games-app-siit.herokuapp.com';
 
 async function getGamesList(){
     try {
@@ -37,9 +37,7 @@ async function createGameRequest(gameObject){
             },
             body: gameObject
         });
-        const createdGame = await response.json();
-        console.log("game created successfully in Dom ", createdGame);
-        createDomElement(createdGame);
+        return response.json();
     }
     catch (error) {
         console.log("The game cannot be created: ", error);

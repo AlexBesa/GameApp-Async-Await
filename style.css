@@ -154,7 +154,7 @@ h1 {
     outline: none;
     border: none;
 }
-.container>div {
+#container>div {
     clear: both;
 }
 

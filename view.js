@@ -131,7 +131,15 @@ document.querySelector(".submitBtn").addEventListener("click", event => {
         urlencoded.append("description", gameDescription.value);
         console.log("aici e urlencoded ", urlencoded)
 
-        createGameRequest(urlencoded);
+        async function newGameRelease(){
+            const newGame = await createGameRequest(urlencoded);
+            createDomElement(newGame)
+        console.log("game created successfully in Dom ", newGame);
+
+        }
+        newGameRelease();
+        
+        
     }
     gameTitle.value = "";
     gameDescription.value = "";
